@@ -1,0 +1,30 @@
+ <h1>Artist index</h1> 
+
+ <%= link_to 'New Artist', new_artist_path %>
+ <div class="ui divider"></div>
+ <div class="ui grid">
+
+ <% @artists.each do |artist| %>
+ <div class= "sixteen wide mobile eight wide tablet four wide computer column">
+      <div class= "ui card">
+        <div class="image">
+        <img src=<%=artist.avatar %>/>
+      </div>
+
+<div class="content">
+   <%= link_to "#{artist.name} #{artist.genra} #{artist.label}",artist,class: "header" %>
+      </div>
+        <div class="extra content">
+           <div class="ui two buttons">
+              <div class= "ui basic green button">
+                 <%= link_to 'Edit', edit_artist_path(artist.id) %>
+                  </div>
+
+                <div class= "ui basic red button">
+              <%= link_to 'Destroy',artist, method: :delete, data: {confirm: "Trash!"} %>
+          </div>
+      </div>
+   </div>
+</div>
+ <% end %>
+</div>

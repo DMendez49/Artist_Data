@@ -1,0 +1,22 @@
+
+
+<div class="ui card">
+  <div class="image">
+    <img src="https://robohash.org/<%= @artist.avatar %>?set=set5" />
+  </div>
+  <div class="content">
+    <p class="header">
+      <%= @artist.name %> <%= @artist.label %>
+    </p>
+    <div class="meta">
+      <span class="date"><%= @artist.genra %></span>
+    </div>
+    <div class="description">
+      <%= @artist.name %>
+    </div>
+  </div>
+  <div class="extra content">
+    <%= link_to 'Edit', edit_artist_path(@artist) %> 
+    <%= link_to 'Back', artists_path %>
+  </div>
+</div>
