@@ -1,15 +1,13 @@
-Rails.application.routes.draw do
- 
-  # get 'artist/index'
-  # get 'artist/show'
-  # get 'artist/new'
-  # get 'artist/create'
-  # get 'artist/edit'
-  # get 'artist/update'
-  # get 'artist/destroy'
-  # # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
+Rails.application.routes.draw do  
+  get 'billboard/new'
+  get 'billboard/create'
   root 'artists#index'
 
-  resources :artists
+  resources :artists do
+    resources :songs
+end
+
+  # resources :songs do 
+  #   resources :billboard
+  # end
 end

@@ -1,0 +1,26 @@
+
+<h1> <%= @artist.name%> </h1>
+<h4>Name: <%= @song.song_name%><h4>
+<h4>Artist: <%= @song.artist_name%></h4>
+<h4>hits: <%= @song.hits%></h4>
+<br/>
+<h2>Comments</h2>
+
+<br/>
+<br/>
+ <%= link_to 'Edit Song', edit_artist_song_path([@artist, @song]) %>
+ <%= link_to 'Delete Song', [@artist, @song], method: :delete %>
+ <%= link_to 'Back to Songs', artist_songs_path(@artist) %>
+
+
+
+
+
+
+
+
+
+
+
+
+                                  

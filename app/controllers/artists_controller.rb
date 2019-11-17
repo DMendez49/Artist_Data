@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  before_action :set_Artist, only: [:show, :edit, :update,:destroy]
+  before_action :set_artist, only: [:show, :edit, :update,:destroy]
 
   def index
     @artists = Artist.all
@@ -14,7 +14,7 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.new(artist_params)
-    @artist.avatar="https://robohash.org/76.76.252.16.png, https://robohash.org/76.76.252.16.png "
+
     if @artist.save
       redirect_to artist_path(@artist)
     else
@@ -23,7 +23,6 @@ class ArtistsController < ApplicationController
   end
 
   def edit
-    
   end
 
   def update
@@ -39,8 +38,8 @@ end
     redirect_to artist_path
   end
 
-  # private
-    def set_Artist
+  private
+    def set_artist
       @artist = Artist.find(params[:id])
     end
 
@@ -48,4 +47,5 @@ end
      params.require(:artist).permit(:name, :genra, :label)
    end
 end
+
 

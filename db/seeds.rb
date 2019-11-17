@@ -1,7 +1,7 @@
 100.times do
   Artist.create(
-    Name: Faker::Artist.Name,
-    Genra: Faker::Music.Genra,
-    Label: Faker::JapaneseMedia::DragonBall.Label
+    name: Faker::Artist.name,
+    genra: Faker::Music.genre,
+    label: Faker::JapaneseMedia::DragonBall.character
   )
 end
