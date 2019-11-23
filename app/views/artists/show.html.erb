@@ -14,7 +14,8 @@
     </div>
   </div>
   <div class="extra content">
-    <%= link_to 'Edit', edit_artist_path(@artist) %> 
-    <%= link_to 'Back', artists_path %>
+    <%= link_to 'Edit', edit_artist_path(@artist) %> |
+    <%= link_to 'Back', artists_path %> |
+    <%= link_to 'Create song', new_artist_song_path(@artist) %>
   </div>
 </div>
